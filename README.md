@@ -1,4 +1,4 @@
-# To Do List In Class Build
+# Chu_Q_HW3 - To Do List
 This is a to-do list for css cascade, selection & pseudo selectors.
 
 ## Installation
