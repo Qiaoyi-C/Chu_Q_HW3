@@ -5,11 +5,16 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgba(225, 225, 225, 0.398);
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fff;
+    font-family: 'Nova Square', sans-serif;
+   
 }
+
 
 main{
     display: flex;
@@ -18,50 +23,58 @@ main{
 }
 
 header{
-    background-color: #0edabf;
+    background-color: #673e08;
     padding: 10px 0;
+    content: \2708;
 }
 
-header > h1{
+#title-page{
+    color: #fff;
+    font-size: 45px;
+   
+}
+
+#title-page::after {
+    content: '\2708';
+}
+
+header  h1{
     text-align: center;
     padding: 10px;
 }
 
-/* applies to all articles */
 article{
     width: 400px;
     border: 4px solid #fff;
     border-radius: 8px;
     margin: 10px;
     text-align: left;
-
+    background-color: #fff;
 }
 
 article h2{
-    color: grey;
+    color: rgb(163, 144, 128);
     padding: 4px 8px; 
-    /* top and bottom left and right */
 }
 
 article:first-of-type{
-    border: 4px solid grey;
+    border: 4px solid rgb(192, 169, 149);
 }
 
-/* This id has a hi */
 #inprogress{
-    border: 4px solid red;
+    border: 4px solid  rgb(254, 235, 192)
 }
 
 #inprogress h2{
-    color: red;
+    color:  rgb(255, 179, 0);
 }
 
 #done{
-    border: 4px solid green;
+    border: 4px solid  rgb(144, 225, 230);
 }
 
 #done h2{
-    color: green;
+    color: rgb(82, 138, 142);
 }
 
 ul{
@@ -74,14 +87,36 @@ ul li{
 }
 
 .todo li:nth-child(odd){
-    background-color: rgba(255, 255, 255, .2);
+    background-color: rgb(192, 169, 149);
 }
 
 .inprogress li:nth-child(odd){
-    background-color: rgba(255, 0, 0, .5);
+    background-color: rgb(254, 235, 192);
 }
 
 .done li:nth-child(odd){
-    background-color: rgba(0, 255, 0, .5);
+    background-color: rgb(144, 225, 230);
 }
 
+input[type="checkbox"]{
+    margin-right: 8px;
+}
+
+input[type="checkbox"]:checked + span::after{
+    content: "\1F44D";
+    width: 28px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+    background-color:#4a954a;
+    border: 4px solid rgb(95, 249, 0);
+    font-size: 20px;
+    position: relative;
+    right: -10px;
+    animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
